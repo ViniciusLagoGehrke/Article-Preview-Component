@@ -1,0 +1,186 @@
+:root{
+  --VeryDarkGrayBlue: hsl(217, 19%, 35%);
+  --DesatDarkBlue: hsl(214, 17%, 51%);
+  --GrayBlue: hsl(212, 23%, 69%);
+  --LightGrayBlue: hsl(210, 46%, 95%);
+  font-size:13px;
+}
+
+body{
+  font-family: 'Manrope', sans-serif;
+  color:var(--VeryDarkGrayBlue);
+  background-color:var(--LightGrayBlue);
+  }
+
+.card{
+  position: absolute;
+  display:flex;
+  flex-flow:column wrap;
+  background-color:white;
+  width: 87vw;
+  border-radius:10px;
+  box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%, -50%);
+}
+
+.front-image{
+  display:block;
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  object-position:0 20%;
+  border-radius:10px 10px 0 0;
+  margin-bottom: 3rem;
+}
+
+/*----------- Main Text ------------*/  
+
+main{
+  height: 50;
+  width:100%;
+}
+
+h3{
+  font-size:1.2rem;
+  font-weight:700;
+  line-height:1.6;
+  margin: 0 2.7rem 1rem;
+}
+
+p{
+  color: var(--DesatDarkBlue);
+  line-height:1.6;
+  margin: 0 2.7rem 1rem;
+}
+
+/*----------- Contact ------------*/  
+
+.contact{
+  border-radius:0 0 10px 10px;
+  height:65px;
+  width:100%;
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+}
+
+/*to add with JS */
+
+/*--- Front ---*/  
+
+.front{
+  display:none;
+  height:100%;
+  width:100%;
+}
+
+.avatar{
+  display:inline-block;
+  height:100%;
+  line-height:80px;
+  position:absolute;
+  top:25%;
+}
+
+.avatar img{
+  margin: 0 1.2rem 0 2.8rem;
+  width:3rem;
+  border-radius:50%;
+}
+
+.info-wrapper{
+  display:inline-block;
+  min-width: 10rem;
+  height:100%;
+  position:absolute;
+  top:25%;
+  left:28%;
+}
+
+.name{
+  line-height: 1.5;
+  font-weight:700;
+}
+
+.date{
+  font-weight:500;
+  line-height: 1.5;
+  color: var(--GrayBlue);
+}
+
+.share{
+  border-radius: 50%;
+  background-color:var(--LightGrayBlue);
+  width: 2.4rem;
+  height: 2.4rem;
+  position:absolute;
+  right:10%;
+  top:32%;
+}
+
+.share img{
+  width:1.15rem;
+}
+
+/*--- Back ---*/  
+
+.back{
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
+  height:100%;
+  width:100%;
+  border-radius:0 0 10px 10px;
+  background-color:var(--VeryDarkGrayBlue);
+  line-height:65px;
+}
+
+.back h5{
+  display:block;
+  color:var(--GrayBlue);
+  text-transform:uppercase;
+  letter-spacing:5px;
+  position:absolute;
+  left:10%;
+}
+
+.icon-flex, .icon-wrapper, .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-wrapper {
+  font-size: 1.3rem;
+  margin: 0 0.6rem;
+}
+
+.icon-flex{
+  position:absolute;
+  left:33%;
+}
+
+
+.share-back{
+  border-radius: 50%;
+  background-color:var(--DesatDarkBlue);
+  width: 30px;
+  height: 30px;
+  position:absolute;
+  right:10%;
+  top:25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-icon path{
+  height:100%;
+  width:100%;
+  fill:white;
+}
+
+.hidden{
+  opacity:1;
+}
+
