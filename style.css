@@ -15,9 +15,10 @@ body{
 .card{
   position: absolute;
   display:flex;
-  flex-flow:column wrap;
+  flex-flow:row wrap;
   background-color:white;
-  width: 87vw;
+  min-width: 327px;
+  min-height: 512px;
   border-radius:10px;
   box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.2);
   left: 50%;
@@ -32,13 +33,12 @@ body{
   object-fit:cover;
   object-position:0 20%;
   border-radius:10px 10px 0 0;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 /*----------- Main Text ------------*/  
 
 main{
-  height: 50;
   width:100%;
 }
 
@@ -46,20 +46,22 @@ h3{
   font-size:1.2rem;
   font-weight:700;
   line-height:1.6;
-  margin: 0 2.7rem 1rem;
+  margin: 0 2.4rem 0.9rem;
 }
 
 p{
   color: var(--DesatDarkBlue);
   line-height:1.6;
-  margin: 0 2.7rem 1rem;
+  margin: 0 2.5rem 7.8rem;
 }
 
 /*----------- Contact ------------*/  
 
 .contact{
+  position:absolute;
+  bottom:0;
   border-radius:0 0 10px 10px;
-  height:65px;
+  height:60px;
   width:100%;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
@@ -71,20 +73,19 @@ p{
 
 .front{
   display:none;
+  flex-flow:row nowrap;
+  align-items:center;
   height:100%;
   width:100%;
+  padding-bottom:1.5rem;
 }
 
 .avatar{
   display:inline-block;
-  height:100%;
-  line-height:80px;
-  position:absolute;
-  top:25%;
 }
 
 .avatar img{
-  margin: 0 1.2rem 0 2.8rem;
+  margin: 0 1.2rem 0 2.6rem;
   width:3rem;
   border-radius:50%;
 }
@@ -92,10 +93,6 @@ p{
 .info-wrapper{
   display:inline-block;
   min-width: 10rem;
-  height:100%;
-  position:absolute;
-  top:25%;
-  left:28%;
 }
 
 .name{
@@ -110,20 +107,19 @@ p{
 }
 
 .share{
+  display:inline-block;
   border-radius: 50%;
   background-color:var(--LightGrayBlue);
   width: 2.4rem;
   height: 2.4rem;
-  position:absolute;
-  right:10%;
-  top:32%;
+  margin-left:3.5rem;
 }
 
 .share img{
   width:1.15rem;
 }
 
-/*--- Back ---*/  
+/*--- Back ---*/
 
 .back{
   display: flex;
@@ -133,7 +129,6 @@ p{
   width:100%;
   border-radius:0 0 10px 10px;
   background-color:var(--VeryDarkGrayBlue);
-  line-height:65px;
 }
 
 .back h5{
@@ -160,7 +155,6 @@ p{
   left:33%;
 }
 
-
 .share-back{
   border-radius: 50%;
   background-color:var(--DesatDarkBlue);
@@ -182,5 +176,100 @@ p{
 
 .hidden{
   opacity:1;
+}
+
+/**********************----laptop&up----***********************/
+
+@media (min-width:430px){
+  .card{
+    max-width: 730px;
+    min-height:280px;
+    left: 30%;
+    top: 30%;
+  }
+
+
+  .front-image{
+    width:39%;
+    height:280px;
+    border-radius:10px 0 0 10px;
+    margin-bottom: 0;
+  }
+
+  main{
+    width:61%;
+    position: relative;
+  }
+
+  h3{
+    font-size:1.5rem;
+    line-height:1.45;
+    margin: 2.5rem 2.7rem 0.9rem;
+  }
+
+  p{
+    margin: 0 2.7rem 1rem;
+  }
+
+/*----------- Contact ------------*/  
+
+  .contact{
+    border-radius:0 0 10px 0;
+    height:75px;
+  }
+
+/*--- Front ---*/ 
+
+  .front{
+    display:flex;
+  }
+
+  .avatar{
+    height:100%;
+    line-height:1;
+  }
+
+  .avatar img{
+    margin: 0 1.5rem 0 3rem;
+    width:3rem;
+    border-radius:50%;
+  }
+
+  .info-wrapper{
+    display:inline-block;
+    min-width: 10rem;
+    height:100%;
+  }
+
+  .name{
+    line-height: 1.5;
+    font-weight:700;
+  }
+
+  .date{
+    font-weight:500;
+    line-height: 1.5;
+    color: var(--GrayBlue);
+  }
+
+  .share{
+    border-radius: 50%;
+    background-color:var(--LightGrayBlue);
+    width: 2.4rem;
+    height: 2.4rem;
+    position:absolute;
+    right:9%;
+    top:10%;
+  }
+
+  .share img{
+    width:1.15rem;
+  }
+
+/*--- Back ---*/ 
+
+  .back{
+    display: none;
+  }
 }
 
