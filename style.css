@@ -17,8 +17,8 @@ body{
   display:flex;
   flex-flow:row wrap;
   background-color:white;
-  min-width: 327px;
-  min-height: 512px;
+  width: 327px;
+  height: 512px;
   border-radius:10px;
   box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.2);
   left: 50%;
@@ -122,13 +122,6 @@ p{
   width:1.15rem;
 }
 
-/*--- Hidden Card ---*/
-
-.hidden{
-  transform:/*scale(.01)*/ translateY(60px);
-  opacity: 0;
-}
-
 /*--- Back ---*/
 
 .back{
@@ -141,6 +134,17 @@ p{
   width:100%;
   border-radius:0 0 10px 10px;
   background-color:var(--VeryDarkGrayBlue);
+
+  transform: translate(0);
+  opacity: 1;
+  transition: opacity 200ms linear;
+}
+
+/*--- Hidden Card ---*/
+
+.hidden{
+  opacity: 0;
+  transform: translate(1000px);
 }
 
 .back h5{
@@ -160,6 +164,7 @@ p{
 .icon-wrapper {
   font-size: 1.3rem;
   margin: 0 0.6rem;
+  cursor: pointer;
 }
 
 .icon-flex{
@@ -178,6 +183,7 @@ p{
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .share-icon path{
@@ -190,10 +196,8 @@ p{
 
 @media (min-width:430px){
   .card{
-    max-width: 730px;
-    min-height:280px;
-    left: 30%;
-    top: 30%;
+    width: 730px;
+    height:280px;
   }
 
 
@@ -309,9 +313,9 @@ p{
   }
 
   .btnShare-back{
-  right:109px;
-  top:83px;
-  z-index: 1;
+    right:109px;
+    top:83px;
+    z-index: 1;
   }
 
 }
