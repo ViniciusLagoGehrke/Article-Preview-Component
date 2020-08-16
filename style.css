@@ -63,11 +63,13 @@ p{
   border-radius:0 0 10px 10px;
   height:60px;
   width:100%;
-  transform-style: preserve-3d;
-  transition: all 0.8s ease;
 }
 
-/*to add with JS */
+/*to add with JS
+  transform-style: preserve-3d;
+  transition: all 0.8s ease;
+*/
+
 
 /*--- Front ---*/  
 
@@ -106,7 +108,7 @@ p{
   color: var(--GrayBlue);
 }
 
-.share{
+.btnShare{
   display:inline-block;
   border-radius: 50%;
   background-color:var(--LightGrayBlue);
@@ -115,7 +117,7 @@ p{
   margin-left:3.5rem;
 }
 
-.share img{
+.btnShare img{
   width:1.15rem;
 }
 
@@ -140,7 +142,7 @@ p{
   left:10%;
 }
 
-.icon-flex, .icon-wrapper, .share {
+.icon-flex, .icon-wrapper, .btnShare {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,7 +157,7 @@ p{
   left:33%;
 }
 
-.share-back{
+.btnShare-back{
   border-radius: 50%;
   background-color:var(--DesatDarkBlue);
   width: 30px;
@@ -252,7 +254,7 @@ p{
     color: var(--GrayBlue);
   }
 
-  .share{
+  .btnShare{
     border-radius: 50%;
     background-color:var(--LightGrayBlue);
     width: 2.4rem;
@@ -262,14 +264,49 @@ p{
     top:10%;
   }
 
-  .share img{
+  .btnShare img{
     width:1.15rem;
   }
 
 /*--- Back ---*/ 
 
   .back{
-    display: none;
+    display: flex;
+    position:absolute;
+    top: -76px;
+    left: 266px;
+    height:4.2rem;
+    width:19rem;
+    border-radius:10px;
+    box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.4);
   }
+
+  .back::after{
+    content:"";
+    display:block;
+    position:absolute;
+    height:20px;
+    width:20px;
+    top:100%;
+    left:50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color:var(--VeryDarkGrayBlue);
+    box-shadow: 10px 10px 15px -5px rgba(0, 0, 0, 0.4);
+  }
+
+  .back h5{
+    left:15%;
+  }
+
+  .icon-flex {
+    left: 45.5%;
+  }
+
+  .btnShare-back{
+  right:109px;
+  top:83px;
+  z-index: 1;
+  }
+
 }
 
