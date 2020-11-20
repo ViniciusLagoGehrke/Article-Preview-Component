@@ -1,4 +1,6 @@
-# Frontend Mentor - Article preview component
+# Article preview component
+
+Exercise using JS EventListener and DOM handling, SVG inline to change properties, and responsive layout
 
 ![Design preview for the Article preview component coding challenge](desktop-preview.jpg)
 
