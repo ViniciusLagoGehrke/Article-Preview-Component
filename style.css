@@ -192,9 +192,9 @@ p{
   fill:white;
 }
 
-/**********************----laptop&up----***********************/
+/**********************----desktop----***********************/
 
-@media (min-width:430px){
+@media (min-width:700px){
   .card{
     width: 730px;
     height:280px;
